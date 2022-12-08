@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { ContentComponent } from './components/content/content.component';
+import { SidebarComponent } from './components/content/sidebar/sidebar.component';
 
 registerLocaleData(en);
 
@@ -19,7 +20,8 @@ registerLocaleData(en);
   declarations: [
     AppComponent,
     HeaderComponent,
-    ContentComponent
+    ContentComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
