@@ -13,6 +13,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { ContentComponent } from './components/content/content.component';
 import { SidebarComponent } from './components/content/sidebar/sidebar.component';
+import { BoardComponent } from './components/content/board/board.component';
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { BoardBarComponent } from './components/content/board/board-bar/board-bar.component';
 
 registerLocaleData(en);
 
@@ -21,14 +24,17 @@ registerLocaleData(en);
     AppComponent,
     HeaderComponent,
     ContentComponent,
-    SidebarComponent
+    SidebarComponent,
+    BoardComponent,
+    BoardBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+	DragDropModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }
