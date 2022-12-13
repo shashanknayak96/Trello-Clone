@@ -6,7 +6,8 @@ module.exports = {
 	theme: {
 		extend: {
 			spacing: {
-				"sidebar": '260px'
+				"sidebar": '260px',
+				"swimlane": '240px'
 			},
 		},
 	},

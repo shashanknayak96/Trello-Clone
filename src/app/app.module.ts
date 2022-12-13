@@ -16,6 +16,9 @@ import { SidebarComponent } from './components/content/sidebar/sidebar.component
 import { BoardComponent } from './components/content/board/board.component';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { BoardBarComponent } from './components/content/board/board-bar/board-bar.component';
+import { SwimlanesComponent } from './components/content/board/swimlanes/swimlanes.component';
+import { SwimlaneComponent } from './components/content/board/swimlanes/swimlane/swimlane.component';
+import { CardComponent } from './components/content/board/swimlanes/swimlane/card/card.component';
 
 registerLocaleData(en);
 
@@ -26,7 +29,10 @@ registerLocaleData(en);
     ContentComponent,
     SidebarComponent,
     BoardComponent,
-    BoardBarComponent
+    BoardBarComponent,
+    SwimlanesComponent,
+    SwimlaneComponent,
+    CardComponent
   ],
   imports: [
     BrowserModule,

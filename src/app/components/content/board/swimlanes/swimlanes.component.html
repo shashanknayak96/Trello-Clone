@@ -1,0 +1,8 @@
+<div cdkDropList cdkDropListOrientation="horizontal" class="flex" (cdkDropListDropped)="drop($event)" cdkDropListGroup>
+	<div class="ml-2" *ngFor="let swimlane of swimlaneData1" cdkDrag>
+		<div class="ml-2 w-swimlane bg-gray-500 text-gray-500 rounded" *cdkDragPlaceholder>
+			{{swimlane}}
+		</div>
+		<app-swimlane [swimlaneHeader]="swimlane.name" [swimlaneCards]="swimlane.cards"></app-swimlane>
+	</div>
+</div>
