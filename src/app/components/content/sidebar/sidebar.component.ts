@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,9 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidebarComponent implements OnInit {
 
+	@Input() visible: boolean = true;
+	@Output() toggleSideBar: EventEmitter<any> = new EventEmitter<any>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  getSidebarWidth(): number {
+	return this.visible ? 260 : 0;
+  }
+
+  clickSideBarButton()
+  {
+	this.toggleSideBar.emit();
+  }
 }

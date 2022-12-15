@@ -19,6 +19,7 @@ import { BoardBarComponent } from './components/content/board/board-bar/board-ba
 import { SwimlanesComponent } from './components/content/board/swimlanes/swimlanes.component';
 import { SwimlaneComponent } from './components/content/board/swimlanes/swimlane/swimlane.component';
 import { CardComponent } from './components/content/board/swimlanes/swimlane/card/card.component';
+import { CollapserComponent } from './components/content/collapser/collapser.component';
 
 registerLocaleData(en);
 
@@ -32,7 +33,8 @@ registerLocaleData(en);
     BoardBarComponent,
     SwimlanesComponent,
     SwimlaneComponent,
-    CardComponent
+    CardComponent,
+    CollapserComponent
   ],
   imports: [
     BrowserModule,

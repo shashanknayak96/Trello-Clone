@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-content',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
+	@Input() open: boolean = true;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleSideBar()
+  {
+	console.log("TOGGLING");
+	this.open = !this.open;
   }
 
 }

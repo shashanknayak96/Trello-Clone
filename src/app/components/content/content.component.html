@@ -1,5 +1,5 @@
-<div class="flex">
-	<app-sidebar></app-sidebar>
-	<div class="pt-16 text-red-900">Resizer</div>
-	<app-board class=" pt-14 flex-grow bg-gray-200"></app-board>
+<div class="flex bg-gray-200">
+	<app-sidebar [visible]="open" (toggleSideBar)="toggleSideBar()"></app-sidebar>
+	<app-collapser class="pt-12" [visible]="!open" (toggleSideBar)="toggleSideBar()"></app-collapser>
+	<app-board class=" pt-14 ml-4 flex-grow bg-gray-200"></app-board>
 </div>
