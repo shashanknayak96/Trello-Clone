@@ -20,6 +20,9 @@ import { SwimlanesComponent } from './components/content/board/swimlanes/swimlan
 import { SwimlaneComponent } from './components/content/board/swimlanes/swimlane/swimlane.component';
 import { CardComponent } from './components/content/board/swimlanes/swimlane/card/card.component';
 import { CollapserComponent } from './components/content/collapser/collapser.component';
+import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
+import { TooltipComponent } from './components/common/tooltip/tooltip.component';
+import { TooltipModule } from './components/common/tooltip/tooltip.module';
 
 registerLocaleData(en);
 
@@ -34,7 +37,7 @@ registerLocaleData(en);
     SwimlanesComponent,
     SwimlaneComponent,
     CardComponent,
-    CollapserComponent
+    CollapserComponent,
   ],
   imports: [
     BrowserModule,
@@ -42,7 +45,9 @@ registerLocaleData(en);
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-	DragDropModule
+	DragDropModule,
+	NzToolTipModule,
+	TooltipModule
   ],
   providers: [
     { provide: NZ_I18N, useValue: en_US }

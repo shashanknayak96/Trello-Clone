@@ -1,0 +1,14 @@
+<div class="tooltip" 
+[ngClass]="['tooltip--'+position]"
+	[style.left]="left + 'px'"
+	[style.top]="top + 'px'">
+	<div class="flex flex-row">
+		<div>
+			{{tooltip}}
+		</div>
+		&nbsp;
+		<div class="flex items-center justify-center bg-gray-700 w-4 h-4 p-2">
+			[
+		</div>
+	</div>
+</div>

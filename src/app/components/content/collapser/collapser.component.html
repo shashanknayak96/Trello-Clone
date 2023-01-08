@@ -1,7 +1,12 @@
 <div
+	
 	*ngIf="visible"
 	class="relative w-3 h-full bg-gray-200 cursor-pointer hover:bg-gray-300 group" 
-	(click)="expandSideBar()">
+	(click)="expandSideBar()"
+	[tooltip]="getToolTip"
+	[tooltiptext]="'Expand Sidebar'"
+	[position]="TooltipPosition"
+	>
 	<div class="absolute ml-3 bg-gray-300 h-full w-0.5">
 	</div>
 	<div class="absolute mt-8 ml-3 justify-center items-center">

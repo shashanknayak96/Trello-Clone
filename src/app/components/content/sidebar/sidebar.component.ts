@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { TooltipPosition } from 'src/app/models/tooltip-positions';
+import { TooltipComponent } from '../../common/tooltip/tooltip.component';
 
 @Component({
   selector: 'app-sidebar',
@@ -9,10 +11,16 @@ export class SidebarComponent implements OnInit {
 
 	@Input() visible: boolean = true;
 	@Output() toggleSideBar: EventEmitter<any> = new EventEmitter<any>();
+	TooltipPosition: TooltipPosition = TooltipPosition.BELOW;
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  get getToolTip()
+  {
+	return TooltipComponent;
   }
 
   getSidebarWidth(): number {
