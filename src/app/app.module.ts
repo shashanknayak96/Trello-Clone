@@ -21,36 +21,39 @@ import { SwimlaneComponent } from './components/content/board/swimlanes/swimlane
 import { CardComponent } from './components/content/board/swimlanes/swimlane/card/card.component';
 import { CollapserComponent } from './components/content/collapser/collapser.component';
 import { NzToolTipModule } from 'ng-zorro-antd/tooltip';
-import { TooltipComponent } from './components/common/tooltip/tooltip.component';
 import { TooltipModule } from './components/common/tooltip/tooltip.module';
+import {OverlayModule} from '@angular/cdk/overlay';
+import { CardDetailComponent } from './components/content/board/swimlanes/swimlane/card/card-detail/card-detail.component';
 
 registerLocaleData(en);
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    ContentComponent,
-    SidebarComponent,
-    BoardComponent,
-    BoardBarComponent,
-    SwimlanesComponent,
-    SwimlaneComponent,
-    CardComponent,
-    CollapserComponent,
+	AppComponent,
+	HeaderComponent,
+	ContentComponent,
+	SidebarComponent,
+	BoardComponent,
+	BoardBarComponent,
+	SwimlanesComponent,
+	SwimlaneComponent,
+	CardComponent,
+	CollapserComponent,
+	CardDetailComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule,
-    BrowserAnimationsModule,
+	BrowserModule,
+	AppRoutingModule,
+	FormsModule,
+	HttpClientModule,
+	BrowserAnimationsModule,
 	DragDropModule,
 	NzToolTipModule,
-	TooltipModule
+	TooltipModule,
+	OverlayModule
   ],
   providers: [
-    { provide: NZ_I18N, useValue: en_US }
+	{ provide: NZ_I18N, useValue: en_US }
   ],
   bootstrap: [AppComponent]
 })

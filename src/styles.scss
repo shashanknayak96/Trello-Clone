@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import '@angular/cdk/overlay-prebuilt.css';
+
+$color-primary: #4571c4;
+// Overlay backdrop styling
+.overlay-backdrop {
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+// Overlay panel styling
+.overlay-panel {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffff;
+	padding: 20px;
+}
