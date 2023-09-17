@@ -17,3 +17,16 @@ $color-primary: #4571c4;
 	background-color: #ffffff;
 	padding: 20px;
 }
+
+// Hide scrollbars from cards
+@layer utilities {
+    /* Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+}

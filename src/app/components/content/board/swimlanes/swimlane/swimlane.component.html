@@ -1,52 +1,100 @@
 <div class="flex flex-col w-swimlane bg-gray-300 rounded">
-	<div class="flex">
-		<input class="m-2 text-gray-800 bg-transparent font-bold cursor-pointer" [value]="swimlaneHeader"
-			onClick="this.select()">
-		<a
-			class="flex items-center ml-auto mr-1 mt-1 mb-1 pl-1 pr-1 justify-center hover:text-gray-800 hover:bg-gray-400 rounded">
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-				stroke="currentColor" class="w-5 h-5">
-				<path stroke-linecap="round" stroke-linejoin="round"
-					d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
-			</svg>
-		</a>
-	</div>
+  <div class="flex">
+    <input
+      class="m-2 text-gray-800 bg-transparent font-bold cursor-pointer"
+      [value]="swimlaneHeader"
+      onClick="this.select()"
+    />
+    <a
+      class="flex items-center ml-auto mr-1 mt-1 mb-1 pl-1 pr-1 justify-center hover:text-gray-800 hover:bg-gray-400 rounded"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="w-5 h-5"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
+        />
+      </svg>
+    </a>
+  </div>
 
-	<!-- Card -->
-	<div cdkDropList [cdkDropListData]="swimlaneCards" class="max-h-[100px] overflow-y-scroll" (cdkDropListDropped)="drop($event)">
-		<div class="" *ngFor="let card of swimlaneCards" cdkDrag>
-			<div class="m-2 bg-gray-500 min-h-[40px] max-h-[240px] rounded" *cdkDragPlaceholder></div>
-			<app-card [cardData]="card"></app-card>
-		</div>
-		<div class="h-1" [hidden]="swimlaneCards.length !> 0"></div>
-	</div>
+  <!-- Card -->
+  <div
+    cdkDropList
+    [cdkDropListData]="swimlaneCards"
+    class="no-scrollbar max-h-96 overflow-y-scroll"
+    (cdkDropListDropped)="drop($event)"
+  >
+    <div class="" *ngFor="let card of swimlaneCards" cdkDrag>
+      <div
+        class="m-2 bg-gray-500 min-h-[40px] max-h-[240px] rounded"
+        *cdkDragPlaceholder
+      ></div>
+      <app-card [cardData]="card"></app-card>
+    </div>
+    <div class="h-1" [hidden]="swimlaneCards.length! > 0"></div>
+  </div>
 
-	<!-- Add card button -->
-	<div 
-		class="flex items-center m-2 p-1 hover:bg-gray-400 rounded cursor-pointer"
-		(click)="toggleAddCardComponent()"
-		*ngIf="!displayAddCardComponent">
-		<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
-			class="w-4 h-4 mr-1">
-			<path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-		</svg>
-		Add a card
-	</div>
+  <!-- Add card button -->
+  <div
+    class="flex items-center m-2 p-1 hover:bg-gray-400 rounded cursor-pointer"
+    (click)="toggleAddCardComponent()"
+    *ngIf="!displayAddCardComponent"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="w-4 h-4 mr-1"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M12 4.5v15m7.5-7.5h-15"
+      />
+    </svg>
+    Add a card
+  </div>
 
-	<!-- Add card component -->
-	<div class="flex flex-col" *ngIf="displayAddCardComponent">
-		<!-- TODO: Make the textbox to be autofocused when opened -->
-		<input 
-			class="m-2 p-2 min-h-[40px] max-h-[240px] bg-white rounded outline-none"
-			placeholder="Enter a title for this card..."
-			autofocus
-			(focusout)="toggleAddCardComponent()">
-		<div class="flex m-2 items-center">
-			<div class="pl-3 pr-3 pt-2 pb-2 bg-blue-600 rounded text-white cursor-pointer">Add card</div>
-			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-				stroke="currentColor" class="ml-2 w-6 h-6 text-gray-800 cursor-pointer" (click)="toggleAddCardComponent()">
-				<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-			</svg>
-		</div>
-	</div>
+  <!-- Add card component -->
+  <div class="flex flex-col" *ngIf="displayAddCardComponent">
+    <!-- TODO: Make the textbox to be autofocused when opened -->
+    <input
+      class="m-2 p-2 min-h-[40px] max-h-[240px] bg-white rounded outline-none"
+      placeholder="Enter a title for this card..."
+      autofocus
+      (focusout)="toggleAddCardComponent()"
+    />
+    <div class="flex m-2 items-center">
+      <div
+        class="pl-3 pr-3 pt-2 pb-2 bg-blue-600 rounded text-white cursor-pointer"
+      >
+        Add card
+      </div>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="ml-2 w-6 h-6 text-gray-800 cursor-pointer"
+        (click)="toggleAddCardComponent()"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>
+    </div>
+  </div>
 </div>

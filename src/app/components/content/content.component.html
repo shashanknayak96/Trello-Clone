@@ -1,5 +1,16 @@
-<div class="flex bg-gray-200">
-	<app-sidebar [visible]="open" (toggleSideBar)="toggleSideBar()"></app-sidebar>
-	<app-collapser class="pt-12" [visible]="!open" (toggleSideBar)="toggleSideBar()"></app-collapser>
-	<app-board class=" pt-14 ml-4 flex-grow bg-gray-200"></app-board>
+<div class="flex flex-1 h-full font-bold bg-gray-200 overflow-auto">
+	<div>
+		<app-sidebar
+			class="overflow-auto"
+			[visible]="open"
+			(toggleSideBar)="toggleSideBar()"
+		></app-sidebar>
+	</div>
+	<div>
+		<app-collapser
+			[visible]="!open"
+			(toggleSideBar)="toggleSideBar()"
+		></app-collapser>
+	</div>
+	<app-board class="flex-1 ml-4 bg-gray-200 overflow-auto"></app-board>
 </div>

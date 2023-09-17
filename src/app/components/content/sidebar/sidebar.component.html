@@ -1,5 +1,5 @@
 <div [style.width.px]="getSidebarWidth()"
-	class="flex flex-col pt-16 h-screen overflow-y-auto border-r-2 border-gray-300 bg-gray-200 transition-all ease-linear duration-1000">
+	class="flex flex-col h-full overflow-auto border-r-2 border-gray-300 bg-gray-200 transition-all ease-linear duration-400">
 	<!-- Project Workspaces -->
 	<div class="flex h-16 items-center">
 		<div class="pl-2">
@@ -8,7 +8,7 @@
 			</div>
 		</div>
 		<div class="flex flex-col pl-2">
-			<div class="font-bold">
+			<div class="whitespace-nowrap font-bold">
 				Projects Workspace
 			</div>
 			<div class="text-xs">
@@ -83,8 +83,8 @@
 	</div>
 
 	<!-- Workspace Views -->
-	<div class="flex flex-col pt-2">
-		<div class="flex ml-4 text-gray-900 font-bold">
+	<div class="pt-2">
+		<div class="whitespace-nowrap ml-4 text-gray-900 font-bold">
 			Workspace views
 		</div>
 		<div>
@@ -136,7 +136,7 @@
 	<!-- Boards -->
 	<div class="flex flex-col pt-2">
 		<div class="flex ml-4 text-gray-900 font-bold items-center group">
-			<div>
+			<div class="whitespace-nowrap">
 				Your boards
 			</div>
 			<div class="flex ml-auto">
@@ -160,7 +160,7 @@
 			<a class="flex flex-row items-center hover:bg-gray-300 hover:text-gray-900 pt-1.5 pb-1.5 group">
 				<div class="ml-4 p-2 w-6 h-5 bg-red-500">
 				</div>
-				<div class="pl-2 text-gray-900">
+				<div class="whitespace-nowrap pl-2 text-gray-900">
 					My First Board
 				</div>
 				<div class="flex ml-auto">
@@ -185,7 +185,7 @@
 			<a class="flex flex-row items-center hover:bg-gray-300 hover:text-gray-900 pt-1.5 pb-1.5 group">
 				<div class="ml-4 p-2 w-6 h-5 bg-green-500">
 				</div>
-				<div class="pl-2 text-gray-900">
+				<div class="whitespace-nowrap pl-2 text-gray-900">
 					My First Board 2
 				</div>
 				<div class="flex ml-auto">
@@ -210,7 +210,7 @@
 			<a class="flex flex-row items-center hover:bg-gray-300 hover:text-gray-900 pt-1.5 pb-1.5 group">
 				<div class="ml-4 p-2 w-6 h-5 bg-yellow-500">
 				</div>
-				<div class="pl-2 text-gray-900">
+				<div class="whitespace-nowrap pl-2 text-gray-900">
 					My First Board 3
 				</div>
 				<div class="flex ml-auto">
@@ -238,7 +238,7 @@
 	<!-- TODO: Make button open GitHub page -->
 	<div class="flex flex-col flex-grow justify-end">
 		<button
-			class="flex items-center justify-center bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 p-2 m-2 rounded cursor-pointer text-white font-bold hover:scale-105 duration-100 ease-in">
+			class="items-center justify-center bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 p-2 m-2 rounded cursor-pointer text-white font-bold hover:scale-105 duration-100 ease-in whitespace-nowrap">
 			Made by Shashank
 		</button>
 	</div>
